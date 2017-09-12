@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form>
+    <form id = "_form">
         Promień: <input id = "r" type = "text"><br>
         Wysokość stożka: <input id = "h" type = "text"><br>
         Tworząca stożka: <input id = "l" type = "text">
@@ -19,10 +19,15 @@
         Stożek <input type = "radio" name = "figure" value = "stozek">
 
 
-        <button type = "button">Oblicz</button>
+        <button type = "button" onclick = "calc()">Oblicz</button>
     </form>
 
-   <script src="../js-dom/js-dom/calc.js"></script>
+    <div id = "wynik">
+
+
+    </div>
+
+   <script src="js-dom/calc.js"></script>
 </body>
 
 </html>
