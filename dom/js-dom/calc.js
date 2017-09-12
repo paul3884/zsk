@@ -11,11 +11,7 @@ function liczObwodKola(r){
     return (2 * pi * r);
 }
 function liczObjetoscStozka(r, h){
-    if(r < 0 && h < 0)
-        return
-
-    var objetosc = (Math.pow(r, 2) * pi * h)/3;
-    return objetosc;
+    return (Math.pow(r, 2) * pi * h)/3;
 }
 function liczPoleStozka(r, l){
     var polePodstawy =  pi * Math.pow(r, 2);
