@@ -14,8 +14,8 @@ var male = tekst.toLowerCase();
 
 console.log(male);
 
-//camelCase - zapis zmiennej 
-var duzaMala = tekst.charAt(0).toUpperCase() + tekst.slice(1).toLowerCase(); 
+//camelCase - zapis zmiennej
+var duzaMala = tekst.charAt(0).toUpperCase() + tekst.slice(1).toLowerCase();
 
 console.log(duzaMala);
 

@@ -5,7 +5,7 @@ function witaj(imie){
     document.write("POLAKI" +" " + imie);
 }
 
-function PoleProstokata(a,b){ 
+function PoleProstokata(a,b){
     return a*b;
 }
 
