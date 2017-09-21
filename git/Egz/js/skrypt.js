@@ -44,9 +44,15 @@ pDzielenie.onclick = function(){
 }
 
 pPotegowanie.onclick = function(){
-    if(parseInt(lDruga.value) ==0)
+    if(parseInt(lDruga.value) == 0){
         rezultat.textContent = 1;
+        return;
+    }
 
+    if(parseInt(lDruga.value) < 0){
+        rezultat.textContent = "Wykładnik potęgi musi być dodatni";
+        return;
+    }
 
     var wartosc = 1;
     for(var i = 0; i < parseInt(lDruga.value); i++){
@@ -54,5 +60,5 @@ pPotegowanie.onclick = function(){
         wartosc *= lPierwsza.value
     }
 
-    rezultat.textContent = wartosc;
+    rezultat.textContent = "Wynik działania wynosi:  " + wartosc;
 }
