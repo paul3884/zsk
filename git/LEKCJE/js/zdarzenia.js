@@ -17,7 +17,7 @@ elKomunikat.style.color = "red";
 
 window.onload = function(){
 
-    alert("SPIERDALAJ JAK NAJSZYBCEJ");
+    alert("SA");
 }
 
 
@@ -45,13 +45,46 @@ function mail(){
 
 
 }
+function password(){
+
+    if(elPass1.value != elPass2.value){
+
+        elKomunikat.textContent = "Podane hasla sa rozne sa rozne";
+
+        elPass1.focus();
+
+    }
+
+
+}
 function blokuj(){
     elMail2.disabled = false;
     this.disabled = true;
 }
+
+function odblokuj(){
+    var zablokowane = document.querySelectorAll("input[disabled]");
+
+
+    if(zablokowane.length > 0){
+        console.log(zablokowane);
+
+
+            for(var i = 0; i < zablokowane.length; i++){
+                zablokowane[i].disabled = false;
+            }
+
+
+        }
+    }
+
+
+
 elImie.addEventListener("blur", sprawdz);
 elNazwisko.addEventListener("blur", sprawdz);
 elLogin.addEventListener("blur", sprawdz);
 
 elMail2.addEventListener("blur",mail);
 elMail1.addEventListener("blur",blokuj);
+
+pPopraw.onclick = odblokuj;
