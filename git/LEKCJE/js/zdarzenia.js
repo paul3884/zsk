@@ -65,20 +65,48 @@ function blokuj(){
 function odblokuj(){
     var zablokowane = document.querySelectorAll("input[disabled]");
 
-
     if(zablokowane.length > 0){
         console.log(zablokowane);
-
 
             for(var i = 0; i < zablokowane.length; i++){
                 zablokowane[i].disabled = false;
             }
+        }
+}
 
+
+function wyslij(){
+
+    var puste = false;
+    var input = document.querySelectorAll("input");
+
+    for(var i = 0; i < input.length; i++){
+
+        if(input[i].value == ""){
+            puste = true;
+            break;
 
         }
     }
 
+    if(puste){
+        elKomunikat.textContent = "MASZ PUSTE POLA";
 
+    }else{
+
+
+        document.write("<div>");
+        document.write("Imie: " + elImie.value+ "<br>");
+        document.write("Nazwisko: " + elNazwisko.value + "<br>");
+        document.write("Login: " + elLogin.value + "<br>");
+        document.write("E-mail: " + elMail1.value + "<br>");
+        document.write("Data: " + elDate.value + "<br>");
+
+
+        document.write("</div>");
+    }
+
+}
 
 elImie.addEventListener("blur", sprawdz);
 elNazwisko.addEventListener("blur", sprawdz);
@@ -88,3 +116,4 @@ elMail2.addEventListener("blur",mail);
 elMail1.addEventListener("blur",blokuj);
 
 pPopraw.onclick = odblokuj;
+pWyslij.onclick = wyslij;

@@ -2,3 +2,16 @@ fieldset{
 
     display: inline-block;
 }
+ul{
+    list-style: none;
+    color:aliceblue;
+}
+.niebieski{
+    background-color: blue;
+}
+.czerwony{
+    background-color: red;
+}
+.grey{
+    background-color: grey;
+}
