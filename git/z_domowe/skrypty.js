@@ -7,7 +7,7 @@ var inputs = document.getElementsByTagName("input");
 var conf = document.getElementById("1");
 
 
-var regex = /[0-9]{2}-[0-9]{3}/;
+var regex = /^[0-9]{2}-[0-9]{3}$/;
 
 console.log(inputs);
 
