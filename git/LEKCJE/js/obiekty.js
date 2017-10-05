@@ -33,6 +33,7 @@ var ksiazka = {
         }
 }
 //document.write(ksiazka['autor']['imie']);
+
 //document.write(ksiazka.autor.imie);
 //document.write(ksiazka.autor['imie']);
 
@@ -99,19 +100,24 @@ function Hotel(nazwa,pokoje,zarezerwowanePokoje,silownia,basen,rodzajPokoju){
         return this.pokoje - this.zarezerwowanePokoje;
     }
     this.wyswietl = function(){
-        return 'Nazwa: ' + this.nazwa + '<br>' +
-        'Liczba pokoi: ' + this.pokoje + '<br>' +
-        'Pokoje zarezerwowane: ' + this.zarezerwowanePokoje + '<br>' +
-        'Czy jest siłownia: ' + this.silownia + '<br>' +
-        'Czy jest basen: ' + this.basen + '<br>' +
-        'Rodzaje pokojów: ' + this.rodzajPokoju + '<br>' +
-        'Wolne pokoje: ' + this.wolnePokoje();
+        return new Array('Nazwa: ' + this.nazwa,'Liczba pokoi: ' + this.pokoje, 'Pokoje zarezerwowane: ' + this.zarezerwowanePokoje, 'Czy jest siłownia: ' + this.silownia, 'Czy jest basen: ' + this.basen, 'Rodzaje pokojów: ' + this.rodzajPokoju, 'Wolne pokoje: ' + this.wolnePokoje());
+
+
+
+        ;
     }
 }
 
 var HotelLech = new Hotel('Lech',100,30,true,false, ['jednoosobowy','apartament']);
 
-document.write(HotelLech.wyswietl());
+var hotelInformacje = HotelLech.wyswietl();
+
+for(var i= 0; i < hotelInformacje.length; i ++){
+    document.write(hotelInformacje[i] + "<br>");
+}
+
+
+
 
 //zmienic metode wyswietl z konstruktora hotel, zastosuj tablice do wyswietlania wartosci
 
