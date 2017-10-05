@@ -17,6 +17,33 @@ var regMail = /^[a-z0-9][\w\.\-]{1,29}[a-z0-9]\@[a-z0-9]{2,10}\.([a-z0-9]{2,10}\
 var regPass =/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W\_]).{8,35})$/ //bezpieczne haslo: male i duze litery, cyfry, znak specjalny
 elKomunikat.style.color = 'red';
 
+var obrazek = document.getElementById('s');
+
+function display(){
+    var length = elPass1.value.length;
+    console.log("TEST DZIAŁANIA");
+
+    console.log(length)
+
+
+    if(length < 8){
+        obrazek.src = "images/slabe.png";
+        console.log(obrazek);
+        return;
+    }
+   if(length > 8 && length< 15){
+        obrazek.src = "images/dobre.png";
+        return;
+    }
+    if(length > 15){
+        obrazek.src = "images/silne.png";
+        return;
+    }
+
+}
+
+elPass1.onkeyup = display;
+
 function sprawdzImie(){
 	var sprawdz = regImie.test(elImie.value);
      if(sprawdz)
@@ -157,7 +184,7 @@ function wyslij(){
     }
 }
 
-elImie.addEventListener('blur',sprawdzImie);
+/*elImie.addEventListener('blur',sprawdzImie);
 elNazwisko.addEventListener('blur',sprawdzNazwisko);
 elLogin.addEventListener('blur',sprawdzLogin);
 elMail2.addEventListener('blur',mail);
@@ -166,7 +193,7 @@ elPass2.addEventListener('blur',haslo);
 elPass1.addEventListener('blur',blokujHaslo);
 elRegulamin.addEventListener('change',regulamin);
 elPopraw.addEventListener('click',odblokuj);
-elPrzycisk.addEventListener('click',wyslij);
+elPrzycisk.addEventListener('click',wyslij);*/
 
 //przy hasle wyswietl czy haslo jest slabe, dobre czy silne. wyswietlenie ma byc obrazkiem!!!!!???kolor zielony: silne, pomaranczowy: dobre, czerwony: slabe. progressbar
 
