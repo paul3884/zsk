@@ -19,16 +19,20 @@ elKomunikat.style.color = 'red';
 
 var obrazek = document.getElementById('s');
 
+
 function display(){
     var length = elPass1.value.length;
     console.log("TEST DZIAŁANIA");
 
     console.log(length)
 
+    if(length == 0){
+        obrazek.src = "images/puste.png";
+        return;
+    }
 
     if(length < 8){
         obrazek.src = "images/slabe.png";
-        console.log(obrazek);
         return;
     }
    if(length > 8 && length< 15){
