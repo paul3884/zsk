@@ -54,10 +54,10 @@
 
             if(isset($_GET['kolor'])){
 
-    //echo "Zaznaczyłeś kolor ", $_GET['kolor'];
-    echo "Zaznaczyłeś kolor  {$_GET['kolor']}";
+            echo "Zaznaczyłeś kolor  {$_GET['kolor']}";
 
-}
+            }else
+                echo "nie zaznaczyłeś nic";
 
         ?>
     </body>
