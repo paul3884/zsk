@@ -192,6 +192,49 @@ echo '</pre>';
 //funkcję wyświetlającą zawartość wykorzystaj
 //foreach
 
+$arr3d = array(
+    array(
+        array(),
+        array()
+    ),
+    array(
+        array(),
+        array()
+    ),
+    array(
+        array(),
+        array()
+    ),
+    array(
+        array(),
+        array()
+    )
+);
+
+
+for($i = 0; $i < 9; $i++){
+   for($a = 0; $a < 9; $a++){
+       for($c = 0; $c < 9; $c++){
+           $arr3d[$i][$a][$c] = rand(1,64);
+
+        }
+   }
+
+}
+
+echo "<pre>";
+foreach($arr3d as $v1){
+
+    foreach($v1 as $v2){
+        foreach($v2 as $v3){
+            echo $v3 . " ";
+
+        }
+        echo "<br>";
+    }
+    echo "<br>";
+}
+echo "</pre>";
 
 //OBROBIĆ PODRĘCZNIK Z INFY 60 stron
 //INFORMATYKA EUROPEJCZYKA CZĘŚĆ 1
