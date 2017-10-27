@@ -1,5 +1,22 @@
+<html>
+<head>
+</head>
+    <body>
+    <form action = "tablice.php">
+        <button></button>
+    </form>
+
+    <script>
+
+
+    </script>
+    </body>
+</html>
+
+
 <?php
 
+/*
 
 //tablice indeksowane numerycznie
 
@@ -12,7 +29,7 @@ $csgo = array('VP', 'ASTRALIS', 'FANACIT');
     $e = $i+1;
     echo "$e: $kolory[$i] ";
 }
-echo "<br>";*/
+echo "<br>";
 
 $kolory[0] = 'orange';
 $kolory[1] = 'aqua';
@@ -21,7 +38,7 @@ $kolory[2] = 'magenta';
 /*for($i = 0; $i < count($kolory); $i++){
     $e = $i+1;
     echo "$e: $kolory[$i] ";
-}*/
+}
 
 
 function wypisz($tablica){
@@ -60,7 +77,7 @@ foreach($dane as $a => $v){
 foreach($dane as $wartosc){
     echo "Wartość: $wartosc<br>";
 }
-*/
+
 
 //tablice wielowymiarowe
 
@@ -70,7 +87,7 @@ $uczen = array(
     array('Paweł','Kowalski', 25)
 );
 
-/*for($i = 0; $i < count($uczen); $i++){
+for($i = 0; $i < count($uczen); $i++){
 
     for($j = 0; $j < count($uczen[$i]); $j++){
 
@@ -78,9 +95,9 @@ $uczen = array(
 
 
     }
-}*/
+}
 
-/*
+
 foreach($uczen as $klucz => $tablica){
 
     foreach($tablica as $klucz2 => $wartosc){
@@ -91,7 +108,7 @@ foreach($uczen as $klucz => $tablica){
 
 }
 
-*/
+
 
 
 $cyfry = array(
@@ -101,7 +118,7 @@ $cyfry = array(
     array(9,10)
 );
 
-/*foreach($cyfry as $wartosc){
+foreach($cyfry as $wartosc){
 
     foreach($wartosc as  $x){
 
@@ -109,7 +126,7 @@ $cyfry = array(
 
     }
 
-}*/
+}
 
 $tab = array(1,5,6,2,3,100,-5);
 
@@ -165,8 +182,8 @@ $tabAsoc = array(
 wypisz($tabAsoc);
 
 
-/*echo gettype($tabAsoc['pseudonim']);
-echo gettype($tabAsoc['wiek']);*/
+echo gettype($tabAsoc['pseudonim']);
+echo gettype($tabAsoc['wiek']);
 
 ksort($tabAsoc);
 
@@ -185,6 +202,7 @@ echo '<pre>';
 echo '</pre>';
 
 
+*/
 
 
 //zadanie domowe
@@ -212,19 +230,15 @@ $arr3d = array(
 );
 
 
-for($i = 0; $i < 9; $i++){
-   for($a = 0; $a < 9; $a++){
-       for($c = 0; $c < 9; $c++){
-           $arr3d[$i][$a][$c] = rand(1,64);
+    for($i = 0; $i < 9; $i++){
+        for($a = 0; $a < 9; $a++){
+            for($c = 0; $c < 9; $c++){
+                $arr3d[$i][$a][$c] = mt_rand(-PHP_INT_MAX,PHP_INT_MAX);
 
         }
    }
-
 }
-
-echo "<pre>";
 foreach($arr3d as $v1){
-
     foreach($v1 as $v2){
         foreach($v2 as $v3){
             echo $v3 . " ";
@@ -234,8 +248,10 @@ foreach($arr3d as $v1){
     }
     echo "<br>";
 }
-echo "</pre>";
 
+echo "<pre>";
+print_r($arr3d);
+echo "</pre>";
 //OBROBIĆ PODRĘCZNIK Z INFY 60 stron
 //INFORMATYKA EUROPEJCZYKA CZĘŚĆ 1
 ?>
