@@ -4,6 +4,8 @@
 
 function searchString($tek, $szuk){
     $iter = 0;
+    $t = strlen($tek);
+
     if($szuk == ""){
         echo "Nie podano żadnego znaku";
         return;
@@ -20,7 +22,9 @@ function searchString($tek, $szuk){
         else break;
     }
 
-    echo "Znaleziono <span>$iter</span> wyników!";
+    echo "Znaleziono <span>$iter</span> wyników!<br>";
+    $pr = $iter * strlen($szuk);
+    echo "Szukany ciąg stanowi<span> ".  round(($pr / $t) * 100,2) . "%</span> całości tekstu.";
 
 }
 
@@ -58,10 +62,10 @@ if($poprawnyLogin != $string){
     echo "Tekst został ocenzurowany w <span>$occ</span> miejsach!<br><p>$poprawnyLogin</p>";
 }else{
 
-    echo "Podany tekst jest dobry i nie wymaga cenzurowania ";
+    echo "Podany tekst jest dobry i nie wymaga cenzurowania<br>";
 }
 
-echo "Wyszukuję ciąg \"<span>$szukana</span>\" w tekście!<br>";
+echo "Wyszukuję ciąg \"<span>$szukana</span>\" w tekście o długości <span>". strlen($string) . "</span> znaków!<br>";
 
 
 searchString($string, $szukana);
@@ -89,7 +93,7 @@ echo "<br><p>" . str_replace($szukana,$highLight,$string) . "</p>";
         p{
             display: block;
             width: 100%;
-            height: 40%;
+            height: 38%;
             overflow-y: scroll;
             box-sizing: border-box;
             border: 0.5px solid black;
