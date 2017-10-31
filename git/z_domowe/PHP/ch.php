@@ -21,13 +21,11 @@ function searchString($tek, $szuk){
         }
         else break;
     }
-
     echo "Znaleziono <span>$iter</span> wyników!<br>";
     $pr = $iter * strlen($szuk);
     echo "Szukany ciąg stanowi<span> ".  round(($pr / $t) * 100,2) . "%</span> całości tekstu.";
 
 }
-
 $zlo = array(
     'rwa',
     'urwy',
@@ -59,7 +57,7 @@ $poprawnyLogin = str_replace($zlo, $set, $string, $occ);
 
 if($poprawnyLogin != $string){
 
-    echo "Tekst został ocenzurowany w <span>$occ</span> miejsach!<br><p>$poprawnyLogin</p>";
+    echo "Tekst został ocenzurowany w <span>$occ</span> miejsach!<br><p></p>";
 }else{
 
     echo "Podany tekst jest dobry i nie wymaga cenzurowania<br>";
@@ -70,9 +68,9 @@ echo "Wyszukuję ciąg \"<span>$szukana</span>\" w tekście o długości <span>"
 
 searchString($string, $szukana);
 
-$highLight = "<span>$szukana</span>";
+//$highLight = "<span>$szukana</span>";
 
-echo "<br><p>" . str_replace($szukana,$highLight,$string) . "</p>";
+//echo "<br><p>" . str_replace($szukana,$highLight,$string) . "</p>";
 
 ?>
 
